@@ -66,24 +66,24 @@ contRojo=0
 contMarron=0
 while color!="verde":
   concentracion = float(input('Ingrese la concentracion de PM en ug/m^3: '))
-  contador = 1 + contador
+  contador += 1 
   variables = variantes(concentracion)
   if(variables!="error"):
     ica=ICA(variables[0], variables[1], variables[2], variables[3], concentracion)
     totalICA = totalICA + ica
     color=colorICA(ica)
     if(color=="verde"):
-      contVerde= contVerde+1
+      contVerde += 1
     elif color=="naranja":
-      contNaranja= contNaranja+1
+      contNaranja += 1
     elif color=="morado":
-      contMorado=contMorado+1
+      contMorado +=1
     elif color=="rojo":
-      contRojo=contRojo+1
+      contRojo += 1
     elif color=="amarillo":
-      contAmarillo=contAmarillo+1
+      contAmarillo += 1
     elif color=="marron":
-      contMarron= contMarron+1        
+      contMarron += 1        
 
 def porcentajeColor(contadorColor, contador):
   porcentaje=0
